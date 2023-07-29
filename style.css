@@ -29,6 +29,10 @@ header{
     background-color: rgb(147, 189, 108);
 }
 
+.borda{
+    padding: 0px 25px;
+
+}
 ul{
     display: flex;
     margin: 23px;
@@ -47,9 +51,6 @@ a{
 ul a:hover{
     color: rgb(91, 122, 91);
 }
-.container{
-    padding:0px 50px;
-}
 .center{
     text-align: center;
 }
@@ -58,70 +59,59 @@ line-height: 20px;
 
 }
 footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #111;
-    height: auto;
-    width: 100vw;
-    font-family: "Open Sans";
-    padding-top: 40px;
-    color: #fff;
-}
-.footer-content{
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    text-align: center;
 }
-.footer-content h3{
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    line-height: 3rem;
-}
-.footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-}
-.socials{
-    list-style: none;
+footer .socials
+footer .menu
+{
+    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 1rem 0 3rem 0;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
 }
-.socials li{
-    margin: 0 10px;
+footer .socials li{
+    list-style: none;
+
 }
-.socials a{
-    text-decoration: none;
+footer .socials li a{
+    font-size: 2em;
     color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5;
 }
-.socials a i{
-    font-size: 1.1rem;
-    transition: color .4s ease;
-
+footer .socials li a:hover{
+    transform: translateY(-10px);
 }
-.socials a:hover i{
-    color: aqua;
-}
-
-.footer-bottom{
-    background: #000;
-    width: 100vw;
-    padding: 20px 0;
+footer p{
+    color:#fff;
     text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
-.footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
+.footer .wave{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #f00 url(./imagem/wave.png)
+    background-size: 1000px 100px;
 }
-.footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;}
+footer .wave#wane1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
